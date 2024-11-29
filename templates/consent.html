@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Consentimiento de Cookies</h1>
+    <form method="post">
+        <p>
+            <input type="radio" name="consent" id="accept" value="accept">
+            <label for="accept">Aceptar el uso de cookies</label>
+        </p>
+        <p>
+            <input type="radio" name="consent" id="reject" value="reject">
+            <label for="reject">Rechazar el uso de cookies</label>
+        </p>
+        <button type="submit">Guardar preferencias</button>
+    </form>
+{% endblock %}
