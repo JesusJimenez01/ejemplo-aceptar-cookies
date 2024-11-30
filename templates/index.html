@@ -17,11 +17,11 @@
             <li>Documentar el cumplimiento</li>
         </ol>
     </div>
-    {% if consent == "accepted" %}
-        <p>Has aceptado el uso de cookies</p>
-    {% elif consent == "rejected" %}
-        <p>Has rechazado el uso de cookies</p>
-    {% else %}
-        <p>Necesitamos tu consentimiento para el uso de cookies, <a href="{{ url_for("consent") }}">preferencias</a></p>
-    {% endif %}
+    <p><strong>Preferencias de cookies actuales:</strong></p>
+    <ul>
+        <li>Cookies Analíticas: {% if analytics %}Aceptadas{% else %}Rechazadas{% endif %}</li>
+        <li>Cookies de Marketing: {% if marketing %}Aceptadas{% else %}Rechazadas{% endif %}</li>
+        <li>Cookies Funcionales: {% if functional %}Aceptadas{% else %}Rechazadas{% endif %}</li>
+    </ul>
+    <p>Puedes <a href="{{ url_for('consent') }}">modificar tus preferencias aquí</a>.</p>
 {% endblock %}
